@@ -75,6 +75,13 @@ b, strong { font-weight: 500; }
 html[data-theme="dark"] .theme-toggle .sun { display: none; }
 html[data-theme="dark"] .theme-toggle .moon { display: block; }
 .menu-toggle { display: none; }
+.menu a.nav-cv {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 14px; font-weight: 400; line-height: 1.4;
+  padding: 3px 12px; border: 1px solid var(--accent); border-radius: 999px; color: var(--accent);
+}
+.menu a.nav-cv:hover { background: var(--accent); color: #fff; }
+.nav-cv svg { width: 14px; height: 14px; }
 
 @media (max-width: 640px) {
   .menu-toggle { display: inline-flex; }
@@ -87,6 +94,7 @@ html[data-theme="dark"] .theme-toggle .moon { display: block; }
   .menu.open { display: flex; }
   .menu li { width: 100%; }
   .menu a { display: block; padding: 8px 0; }
+  .menu a.nav-cv { margin: 6px 0 2px; padding: 3px 12px; }
   .menu .theme-item { padding-top: 4px; }
 }
 
@@ -150,6 +158,8 @@ h2.section {
 .pub-title { font-weight: 500; }
 .pub-authors { font-size: 15px; }
 .pub-authors .me { font-weight: 500; text-decoration: underline; text-underline-offset: 3px; }
+.pub-authors sup { font-size: 0.7em; line-height: 0; margin-left: 1px; }
+.pub-note { font-size: 13px; color: var(--muted); white-space: nowrap; }
 .pub-venue { font-size: 15px; font-style: italic; color: var(--muted); }
 .pub-btns { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
 .pub-btns a, .pub-btns button {
@@ -170,13 +180,7 @@ h2.section {
   .pub { flex-direction: column; gap: 6px; }
 }
 
-/* ---------- CV ---------- */
-.cv-download {
-  display: inline-flex; align-items: center; gap: 8px; margin-bottom: 8px;
-  padding: 7px 16px; border-radius: 6px; background: var(--accent); color: #fff; font-weight: 400;
-}
-.cv-download:hover { text-decoration: none; opacity: .9; }
-.cv-download svg { width: 16px; height: 16px; }
+/* ---------- Experience ---------- */
 .cv-list { list-style: none; margin: 0; padding: 0; }
 .cv-item { display: grid; grid-template-columns: 130px 1fr; gap: 20px; padding: 10px 0; }
 .cv-when { color: var(--muted); font-size: 14px; padding-top: 2px; font-variant-numeric: tabular-nums; }
